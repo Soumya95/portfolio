@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{parskip}
+
+% Colors
+\definecolor{accentblue}{RGB}{25, 84, 163}
+\definecolor{darkgray}{RGB}{60, 60, 60}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries\color{accentblue}}
+  {}{0em}{}
+  [\color{accentblue}\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{darkgray}}
+  {}{0em}{}
+\titlespacing{\subsection}{0pt}{6pt}{2pt}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accentblue,
+  linkcolor=accentblue
+}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=3pt, parsep=0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+  {\LARGE\bfseries Soumya Kanti Naskar}\\[4pt]
+  Bengaluru, India \quad|\quad
+  \href{tel:+918777698604}{+91 87776 98604} \quad|\quad
+  \href{mailto:rijunaskar@gmail.com}{rijunaskar@gmail.com}\\[2pt]
+  \href{https://www.linkedin.com/in/soumya-kanti-naskar}{linkedin.com/in/soumya-kanti-naskar} \quad|\quad
+  \href{https://github.com/Soumya95}{github.com/Soumya95}
+\end{center}
+
+\section{Professional Summary}
+
+Delivery Lead and Full Stack Engineer with 7+ years at SAP, driving end-to-end product delivery across
+cloud-native SaaS platforms. Currently leading a 36-member cross-cultural team (India, Vietnam, Germany)
+building Deployment Hub --- a multi-tenant SAP BTP application. Experienced across the full product
+lifecycle: research, architecture, implementation, performance optimization, and General Availability.
+Passionate about AI-first engineering, developer tooling, and making complex systems accessible through
+well-designed UX.
+
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}p{3.2cm}X@{}}
+  \textbf{Languages}      & JavaScript, TypeScript, Python, Java 17, HTML5, CSS \\[2pt]
+  \textbf{Frameworks}     & React.js, Redux / Redux-Saga, Node.js, Spring Boot 3.x, SAPUI5, SAP Fiori Elements \\[2pt]
+  \textbf{Cloud \& BTP}   & SAP BTP Cloud Foundry, CAP OData V4, HANA Cloud / HDI, MTXS multi-tenancy, CF deploy \\[2pt]
+  \textbf{AI \& ML}       & Generative AI integration, Claude Code / LLM tooling, GitHub Actions AI pilots, MCP servers \\[2pt]
+  \textbf{DevOps}         & CI/CD Pipelines, Jenkins, GitHub Actions, Sonar, Cumulus \\[2pt]
+  \textbf{Testing}        & JUnit 5, Cypress, Selenium, QUnit, Chrome DevTools / SUPA \\[2pt]
+  \textbf{Methodologies}  & Agile / Scrum (Delivery Lead + former Scrum Master), Design Thinking, UX Prototyping \\
+\end{tabularx}
+
+\section{Professional Experience}
+
+\subsection{Delivery Lead \& Senior Full Stack Developer \hfill \normalfont\small Oct 2023 -- Present}
+\textit{SAP ISBN --- CDET Initiative, Deployment Hub \quad Bengaluru, India}
+
+Leading delivery of Deployment Hub, a multi-tenant SaaS platform on SAP BTP serving enterprise
+customers globally. Managing a distributed team of 36 engineers across BLR, VNM, and ST3.
+
+\begin{itemize}
+  \item Architected and delivered \textbf{Deployment Hub} --- a tenant-personalization platform reducing
+        customer customization time by 90\% via intuitive React/UI5 UI and partner delegation workflows.
+        \textit{Stack: React JS, Redux-Saga, Java Spring Boot, SAP BTP, CI/CD Pipeline, HANA Cloud HDI}
+  \item Built \textbf{Simplified Implementation} app for Cloud Application Lifecycle Management (CALM),
+        improving implementation tracking and QA workflows.
+        \textit{Stack: SAPUI5, CAP OData V4, SAP BTP}
+  \item Drove AI-first engineering adoption --- integrated Claude Code, established MCP server tooling,
+        and led LLM GitHub Actions pilot across the product org.
+  \item Led cross-cultural collaboration with teams in China, USA, and Germany on UI/UX design,
+        product strategy, and architecture.
+  \item Owned full product lifecycle for both products: user research, prototyping, sprint delivery,
+        Product Standard compliance, and General Availability.
+  \item Managed sprint planning, capacity tracking, stakeholder demos, and release management
+        across 3 geographies on a 2-week cadence.
+\end{itemize}
+
+\subsection{Senior Frontend Developer \& Scrum Master \hfill \normalfont\small May 2019 -- Oct 2023}
+\textit{SAP Fiori Elements, Bengaluru, India}
+
+\begin{itemize}
+  \item Conducted performance optimizations using in-house ``SUPA'' tool and Chrome Performance
+        utilities, improving system responsiveness by \textbf{30\%}.
+  \item Contributed to \textbf{SAP Fiori Launchpad My Home} --- personalized cross-platform SAP Fiori
+        app access on mobile and desktop.
+  \item Served as Scrum Master for framework floorplans: List Report, Object Page, Analytical List Report.
+  \item Created educational YouTube content on SAP Fiori Elements Tips \& Tricks.
+\end{itemize}
+
+\subsection{MEAN Stack Developer \hfill \normalfont\small Jul 2018 -- Apr 2019}
+\textit{SAP BUILD (UX Prototyping Tool), Bengaluru, India}
+
+\begin{itemize}
+  \item Implemented full-text search using Apache Solr.
+  \item Enabled PDF prototyping export capabilities.
+  \item Built Selenium-based end-to-end test suite.
+\end{itemize}
+
+\section{Key Projects}
+
+\subsection{JU Linux User's Group \hfill \normalfont\small Feb 2015 -- May 2018}
+\textit{Co-Founder, Jadavpur University}
+\begin{itemize}
+  \item Established a technical society promoting Linux and FOSS adoption; organized workshops on
+        Bash scripting, web development, cybersecurity, and cryptography.
+\end{itemize}
+
+\subsection{FPGA Cryptographic Research \hfill \normalfont\small Jan 2017 -- Jul 2017}
+\textit{Nanyang Technological University, Singapore}
+\begin{itemize}
+  \item Implemented FPGA-based hardware for SHA-3 (Keccak) cryptographic algorithm under
+        Prof.\ Anupam Chattopadhyay (NTU) and Dr.\ Sourav Sengupta.
+\end{itemize}
+
+\section{Education}
+
+\subsection{Jadavpur University \hfill \normalfont\small 2014 -- 2018}
+B.Tech in Computer Science \& Engineering \hfill CGPA: 8.60 / 10.0
+
+\textit{Relevant Coursework:} Data Structures \& Algorithms, Cloud Native Architecture, Database Systems,
+Operating Systems, Networking, Functional Programming, AI/ML
+
+\section{Publications}
+
+\begin{itemize}
+  \item ``Raga Identification from Hindustani Classical Music Signal Using Compositional Properties''
+        --- \textit{Springer Professional}, Sep 2017
+  \item ``Robust Identification of Dense or Sparse Crowd Based on Classifier Fusion''
+        --- \textit{Springer Professional}, Nov 2019
+\end{itemize}
+
+\section{Achievements}
+
+\begin{itemize}
+  \item \textbf{Winner}, ACM Kolkata B.Tech Project Contest (2018)
+  \item \textbf{Cryptology Research Intern}, ISI Kolkata --- R.C. Bose Centre for Cryptology and Security (2015)
+  \item \textbf{YouTube Technical Content Creator} --- SAP Fiori Elements tutorials for developer community
+  \item Led Deployment Hub from zero to GA serving enterprise SAP customers globally (2024--2025)
+\end{itemize}
+
+\end{document}
