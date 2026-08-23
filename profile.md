@@ -20,7 +20,7 @@
 
 ## Professional Summary (Hero / About section)
 
-I'm a Delivery Lead and Full Stack Engineer with 7+ years at SAP, building cloud-native SaaS products
+I'm a Delivery Lead, Scrum Master, and Full Stack Engineer with 7+ years at SAP, building cloud-native SaaS products
 that reach enterprise customers worldwide. I lead a 36-member distributed team (India, Vietnam, Germany)
 delivering **Deployment Hub** — a multi-tenant platform on SAP BTP that streamlines how enterprises
 deploy and configure SAP Cloud products.
@@ -37,14 +37,15 @@ thousands of SAP developers on YouTube.
 
 ## Current Role
 
-**Delivery Lead & Senior Full Stack Developer**  
+**Delivery Lead, Scrum Master (BLR) & Senior Full Stack Developer**  
 SAP, Intelligent Spend Business Network (ISBN) — CDET Initiative  
 *October 2023 – Present | Bengaluru, India*
 
 ### What I do day-to-day
+- **Scrum Master for the BLR team** — run daily standups, sprint planning, retrospectives, sprint closure & demos for the Bengaluru engineering team
+- **Delivery Lead across 3 geos** — own Scrum of Scrums, Two Tier Scrum, daily cross-team Design/Code Review Blocker sessions, GA status tracking, Functional Grooming, and stakeholder Sprint Demos
 - Lead end-to-end delivery of **Deployment Hub**, a multi-tenant SaaS platform on SAP BTP Cloud Foundry
 - Manage a 36-member cross-cultural engineering team across BLR (Bengaluru), VNM (Vietnam), and ST3 (Germany)
-- Own sprint planning, capacity tracking, stakeholder demos, release management, and Product Standard compliance
 - Drive **AI-first engineering** adoption: integrated Claude Code, MCP server tooling, and LLM GitHub Actions pilots
 - Collaborate with product managers, UX designers, and international engineering leads on strategy and architecture
 
@@ -95,7 +96,7 @@ Jenkins, GitHub Actions, CI/CD Pipelines, Cumulus, SonarQube
 JUnit 5, Cypress (component + E2E), Selenium, QUnit, Chrome DevTools / SUPA
 
 ### Methodologies
-Agile / Scrum (Delivery Lead + former Scrum Master), Design Thinking, UX Prototyping, Product-Led Growth
+Agile / Scrum (Delivery Lead + Scrum Master, BLR), Design Thinking, UX Prototyping, Product-Led Growth
 
 ---
 
@@ -105,7 +106,7 @@ Agile / Scrum (Delivery Lead + former Scrum Master), Design Thinking, UX Prototy
 Multi-tenant SaaS platform on SAP BTP enabling enterprise customers to personalize and manage
 SAP Cloud deployments. Reduced customization time by 90%.
 - **Stack:** React JS, Redux-Saga, Java Spring Boot 3.x, SAP BTP CF, HANA Cloud HDI, CI/CD Pipeline
-- **Role:** Tech Lead → Delivery Lead; full product ownership from inception to GA
+- **Role:** Tech Lead → Delivery Lead + Scrum Master (BLR); full product ownership from inception to GA
 - **Scale:** Serves enterprise SAP customers globally; 36-person team
 
 ### Simplified Implementation (CALM Integration) *(2023 – 2024)*
