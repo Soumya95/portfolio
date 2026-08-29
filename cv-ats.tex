@@ -1,0 +1,246 @@
+%==============================================================================
+%  Soumya Kanti Naskar - ATS-Optimised Curriculum Vitae
+%------------------------------------------------------------------------------
+%  Design rules applied for Applicant Tracking System (ATS) parsers:
+%    * Single column, single-flow text. No tables, no text boxes, no multicol.
+%    * No images, icons, logos, headers or footers.
+%    * Standard section headings ATS parsers recognise verbatim.
+%    * Contact details written as plain, selectable text (not link-only).
+%    * Standard Type 1 font with a full ToUnicode map, so every glyph
+%      round-trips correctly through pdftotext / resume parsers.
+%    * Plain itemize bullets, consistent "Mon YYYY -- Mon YYYY" date format.
+%
+%  Compile with: pdflatex cv-ats.tex   (run twice)
+%==============================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{iftex}
+
+%--- Fonts and ligatures -------------------------------------------------------
+% The "fi"/"ff"/"ffl" ligatures are single glyphs. Some resume parsers extract
+% them as U+FB01/U+FB00/U+FB04 rather than as plain letters, which silently
+% breaks keyword matching ("AI-first", "effort", "profiling", "offline").
+% We therefore switch ligatures OFF and emit a proper Unicode map, on whichever
+% engine is used, so the extracted text is always plain ASCII letters.
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{cmap}                % searchable / copy-pasteable PDF text
+  \usepackage{lmodern}             % Latin Modern: the Computer Modern look of
+                                   % the previous resume, but as scalable Type 1
+                                   % outlines. Plain [T1]{fontenc} without this
+                                   % can fall back to Type 3 BITMAP fonts, from
+                                   % which resume parsers extract nothing at all.
+  \input{glyphtounicode}           % map every glyph to real Unicode
+  \pdfgentounicode=1
+  \usepackage{microtype}
+  \DisableLigatures[f]{encoding = *, family = *}
+\else
+  \usepackage{fontspec}
+  \setmainfont{lmroman10}[
+    Extension     = .otf,
+    UprightFont   = *-regular,
+    BoldFont      = *-bold,
+    ItalicFont    = *-italic,
+    BoldItalicFont= *-bolditalic,
+    Ligatures     = NoCommon]
+\fi
+
+\usepackage[top=0.55in,bottom=0.55in,left=0.6in,right=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{xcolor}
+\definecolor{linknavy}{RGB}{0,51,128}
+% Links are clickable for a human reader, while the VISIBLE text stays the full
+% plain-text handle - so a parser still extracts the URL even if it ignores the
+% /Link annotation entirely.
+\usepackage[colorlinks=true, urlcolor=linknavy, linkcolor=linknavy]{hyperref}
+
+\hypersetup{
+  pdftitle={Soumya Kanti Naskar - Curriculum Vitae},
+  pdfauthor={Soumya Kanti Naskar},
+  pdfsubject={Engineering Delivery Lead / Scrum Master / Senior Full Stack Engineer},
+  pdfkeywords={Engineering Manager, Delivery Lead, Full Stack Engineer, React,
+               TypeScript, Java, Spring Boot, Cloud, SaaS, Multi-tenant, SAP BTP,
+               Agile, Scrum, AI Engineering}
+}
+
+% ---- Section headings: plain bold caps + rule. Parsers read these literally.
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{\MakeUppercase}[\vspace{-6pt}\rule{\textwidth}{0.8pt}]
+\titlespacing{\section}{0pt}{8pt}{3pt}
+
+\setlist[itemize]{leftmargin=1.1em, label=\textbullet, itemsep=1pt, topsep=1.5pt, parsep=0pt}
+\setlength{\parskip}{2pt}
+\pagestyle{empty}
+
+% Role heading: title left, dates flush right, on ONE text line so that a
+% parser reads the job title and its dates as a single associated record.
+% \parfillskip is zeroed so \hfill actually pushes to the right margin.
+\newcommand{\role}[2]{{\parfillskip=0pt\relax\noindent\textbf{#1}\hfill #2\par}}
+\makeatletter
+\newcommand{\org}[2]{%
+  \def\@tmp{#2}%
+  \ifx\@tmp\@empty
+    {\noindent\textit{#1}\par}%
+  \else
+    {\parfillskip=0pt\relax\noindent\textit{#1}\hfill\textit{#2}\par}%
+  \fi
+  \vspace{2pt}}
+\makeatother
+
+\begin{document}
+
+%==============================================================================
+% HEADER - plain text only, no graphics. Every value is machine-readable.
+%==============================================================================
+\begin{center}
+{\LARGE\bfseries Soumya Kanti Naskar}\\[3pt]
+{Engineering Delivery Lead \textbar{} Scrum Master \textbar{} Senior Full Stack Engineer}\\[4pt]
+Bengaluru, India \textbar{} \href{tel:+918777698604}{+91 87776 98604} \textbar{}
+\href{mailto:rijunaskar@gmail.com}{rijunaskar@gmail.com}\\[2pt]
+\href{https://www.linkedin.com/in/soumya-kanti-naskar}{linkedin.com/in/soumya-kanti-naskar}
+\textbar{} \href{https://github.com/Soumya95}{github.com/Soumya95}
+\end{center}
+
+%==============================================================================
+\section{Professional Summary}
+
+Engineering leader and hands-on full stack developer with 8 years at SAP building and shipping
+cloud-native, multi-tenant SaaS products used by enterprise customers worldwide. Currently lead
+delivery for a 36-engineer organisation distributed across India, Vietnam and Germany, owning a
+platform taken from concept to General Availability, and serve as Scrum Master for the Bengaluru
+engineering team. Deep experience across the full product
+lifecycle --- architecture, hands-on development in React and Java, performance engineering, release
+management and cross-functional stakeholder alignment. Early adopter of AI-assisted engineering,
+having rolled out LLM tooling and internal developer platforms across a product organisation.
+
+%==============================================================================
+\section{Technical Skills}
+
+\textbf{Languages:} JavaScript, TypeScript, Java 17, Python, HTML5, CSS3, SQL
+
+\textbf{Frontend:} React.js, Redux, Redux-Saga, Node.js, SAPUI5, SAP Fiori Elements, Responsive Web Design
+
+\textbf{Backend and Data:} Java Spring Boot 3.x, REST APIs, OData V4, SAP CAP, SAP HANA Cloud, HDI, Apache Solr
+
+\textbf{Cloud and Platform:} SAP BTP, Cloud Foundry, Multi-tenant (SaaS) architecture, MTXS tenant isolation, MTA build and deployment
+
+\textbf{AI and Developer Tooling:} Generative AI integration, LLM application development, Claude Code, Model Context Protocol (MCP) servers, AI-assisted code review pipelines
+
+\textbf{DevOps and Quality:} CI/CD pipelines, Jenkins, GitHub Actions, Git, SonarQube, static analysis, release engineering
+
+\textbf{Testing:} JUnit 5, Cypress (component and end-to-end), Selenium, QUnit, Chrome DevTools profiling
+
+\textbf{Leadership:} Delivery management, Agile and Scrum, Scrum Master, Scrum of Scrums, sprint and capacity planning, distributed and cross-cultural team leadership, stakeholder management, technical mentoring, Design Thinking
+
+%==============================================================================
+\section{Professional Experience}
+
+\role{Delivery Lead, Scrum Master (BLR) and Senior Full Stack Developer}{Oct 2023 -- Present}
+\org{SAP, Customer Deployment Experience Transformation (CDET)}{Bengaluru, India}
+
+\begin{itemize}
+  \item Lead end-to-end delivery of \textbf{Deployment Hub}, a multi-tenant SaaS platform on SAP BTP
+        that lets enterprise customers configure and personalise their SAP Cloud deployments; drove
+        the product from initial concept through General Availability to global customer rollout.
+  \item Reduced customer customisation effort by \textbf{90\%} by replacing manual implementation
+        cycles with a self-service personalisation workflow and partner delegation model.
+  \item Serve as \textbf{Scrum Master} for the Bengaluru engineering team --- run daily stand-ups,
+        sprint planning, retrospectives, and sprint closure and demo sessions on a two-week cadence.
+  \item Manage a \textbf{36-engineer distributed organisation} across three sites (India, Vietnam,
+        Germany), driving Scrum of Scrums, daily cross-team design and code-review
+        blocker sessions, functional grooming, capacity forecasting, release management and GA
+        status tracking.
+  \item Architect and build the platform hands-on: React and Redux-Saga front end, Java Spring Boot
+        3.x services, multi-tenant provisioning on Cloud Foundry, and SAP HANA Cloud HDI persistence.
+  \item Drove \textbf{AI-first engineering adoption} across the product organisation --- rolled out
+        Claude Code to engineering teams, built internal MCP server tooling for domain-specific
+        workflows, and piloted LLM-powered GitHub Actions in the development pipeline.
+  \item Delivered the \textbf{Simplified Implementation} application, an in-product SAP Cloud ALM
+        integration (SAPUI5, CAP OData V4) that streamlined implementation tracking and quality
+        assurance for delivery teams.
+  \item Partner with product management, UX design and engineering leadership across Germany, the
+        United States and China on product strategy, architecture decisions and roadmap definition;
+        own accessibility, security and performance release gates for General Availability.
+\end{itemize}
+
+\role{Senior Frontend Developer and Scrum Master}{May 2019 -- Oct 2023}
+\org{SAP, SAP Fiori Elements}{Bengaluru, India}
+
+\begin{itemize}
+  \item Developed core capabilities of \textbf{SAP Fiori Elements}, a metadata-driven UI framework
+        that thousands of enterprise applications are built on, contributing to the List Report,
+        Object Page and Analytical List Report templates.
+  \item Improved application responsiveness by \textbf{30\%} through systematic performance
+        profiling with Chrome DevTools and SAP's internal SUPA tooling, then eliminating the
+        rendering and data-fetch bottlenecks identified.
+  \item Contributed to \textbf{SAP Fiori Launchpad My Home}, delivering personalised, cross-platform
+        application access for users on desktop and mobile.
+  \item Served as \textbf{Scrum Master} for three framework teams --- ran ceremonies, backlog
+        refinement, impediment resolution and delivery metrics, while continuing as a hands-on
+        contributor.
+  \item Authored and published a YouTube tutorial series on SAP Fiori Elements, reaching thousands
+        of developers in the SAP ecosystem.
+\end{itemize}
+
+\role{Full Stack Developer (MEAN Stack)}{Jul 2018 -- Apr 2019}
+\org{SAP, SAP BUILD}{Bengaluru, India}
+
+\begin{itemize}
+  \item Built features for SAP BUILD, a web-based UX prototyping and user-research platform, using
+        MongoDB, Express, AngularJS and Node.js.
+  \item Integrated \textbf{Apache Solr} to deliver fast full-text search across platform content.
+  \item Shipped PDF export for interactive prototypes, enabling offline design review and
+        stakeholder sign-off.
+  \item Implemented an end-to-end \textbf{Selenium} regression suite, increasing release confidence
+        and reducing manual test effort.
+\end{itemize}
+
+%==============================================================================
+\section{Education}
+
+\role{Bachelor of Technology (B.Tech), Computer Science and Engineering}{2014 -- 2018}
+\org{Jadavpur University, Kolkata, India}{CGPA: 8.60 / 10.0}
+
+%==============================================================================
+\section{Publications}
+
+\begin{itemize}
+  \item Naskar, S. K. et al. ``Robust Identification of Dense or Sparse Crowd Based on Classifier
+        Fusion.'' \textit{Springer}, November 2019.
+        \href{https://rdcu.be/gYz4zQj2Nc2a}{View publication}
+  \item Naskar, S. K. et al. ``Raga Identification from Hindustani Classical Music Signal Using
+        Compositional Properties.'' \textit{Springer}, September 2017.
+        \href{https://www.researchgate.net/publication/320003899_Raga_identification_from_Hindustani_classical_music_signal_using_compositional_properties}{View publication}
+\end{itemize}
+
+%==============================================================================
+\section{Research and Community}
+
+\role{FPGA Cryptographic Hardware Research}{Jan 2017 -- Jul 2017}
+\org{Nanyang Technological University (NTU), Singapore}{Research Intern}
+\begin{itemize}
+  \item Designed and implemented an FPGA-based hardware accelerator for the SHA-3 (Keccak)
+        cryptographic hash algorithm, advised by Prof.\ Anupam Chattopadhyay and Dr.\ Sourav Sengupta.
+\end{itemize}
+
+\role{Co-Founder, JU Linux User's Group}{Feb 2015 -- May 2018}
+\org{Jadavpur University, Kolkata, India}{}
+\begin{itemize}
+  \item Founded and ran a technical society promoting Linux and open-source adoption on campus,
+        delivering workshops on shell scripting, web development, cybersecurity and cryptography.
+\end{itemize}
+
+%==============================================================================
+\section{Awards and Achievements}
+
+\begin{itemize}
+  \item \textbf{Winner}, ACM Kolkata B.Tech Project Contest, 2018.
+        \href{https://kolkata.acm.org/award/2018/contest.html}{Winner list}
+        \textbar{} \href{https://www.youtube.com/channel/UCdzovuM-pSreOdDChHaa_Dw}{Award ceremony}
+  \item \textbf{Cryptology Research Intern}, R.C. Bose Centre for Cryptology and Security,
+        Indian Statistical Institute (ISI) Kolkata, 2015.
+\end{itemize}
+
+\end{document}
