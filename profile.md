@@ -38,12 +38,12 @@ thousands of SAP developers on YouTube.
 ## Current Role
 
 **Delivery Lead, Scrum Master (BLR) & Senior Full Stack Developer**  
-SAP, Intelligent Spend Business Network (ISBN) — CDET Initiative  
+SAP, Customer Deployment Experience Transformation (CDET)  
 *October 2023 – Present | Bengaluru, India*
 
 ### What I do day-to-day
 - **Scrum Master for the BLR team** — run daily standups, sprint planning, retrospectives, sprint closure & demos for the Bengaluru engineering team
-- **Delivery Lead across 3 geos** — own Scrum of Scrums, Two Tier Scrum, daily cross-team Design/Code Review Blocker sessions, GA status tracking, Functional Grooming, and stakeholder Sprint Demos
+- **Delivery Lead across 3 geos** — own Scrum of Scrums, daily cross-team Design/Code Review Blocker sessions, GA status tracking, Functional Grooming, and stakeholder Sprint Demos
 - Lead end-to-end delivery of **Deployment Hub**, a multi-tenant SaaS platform on SAP BTP Cloud Foundry
 - Manage a 36-member cross-cultural engineering team across BLR (Bengaluru), VNM (Vietnam), and ST3 (Germany)
 - Drive **AI-first engineering** adoption: integrated Claude Code, MCP server tooling, and LLM GitHub Actions pilots
@@ -135,16 +135,16 @@ Operating Systems, Networking, Functional Programming, AI/ML
 ## Publications
 
 1. *"Raga Identification from Hindustani Classical Music Signal Using Compositional Properties"*  
-   Springer Professional — September 2017
+   Springer Professional — September 2017 — [View publication](https://www.researchgate.net/publication/320003899_Raga_identification_from_Hindustani_classical_music_signal_using_compositional_properties)
 
 2. *"Robust Identification of Dense or Sparse Crowd Based on Classifier Fusion"*  
-   Springer Professional — November 2019
+   Springer Professional — November 2019 — [View publication](https://rdcu.be/gYz4zQj2Nc2a)
 
 ---
 
 ## Achievements & Recognition
 
-- **Winner** — ACM Kolkata B.Tech Project Contest, 2018
+- **Winner** — ACM Kolkata B.Tech Project Contest, 2018 — [Winner list](https://kolkata.acm.org/award/2018/contest.html) · [Award ceremony](https://www.youtube.com/channel/UCdzovuM-pSreOdDChHaa_Dw)
 - **Cryptology Research Intern** — ISI Kolkata, R.C. Bose Centre for Cryptology and Security, 2015
 - **YouTube Technical Content Creator** — SAP Fiori Elements tutorials watched by thousands of SAP developers
 - Led Deployment Hub from zero to General Availability serving global enterprise customers (2024–2025)
